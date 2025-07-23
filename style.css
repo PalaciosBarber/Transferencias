@@ -1,0 +1,97 @@
+body {
+  font-family: 'Arial', sans-serif; /* Changed to a more modern font */
+  background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 30px;
+  font-size: 24px; /* Increased font size */
+}
+
+.dato {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+  padding: 15px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  transition: box-shadow 0.2s, transform 0.2s; /* Added transform for hover effect */
+}
+
+.dato:hover {
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+.dato span {
+  color: #333;
+  font-weight: 500;
+  flex: 1;
+}
+
+.dato button {
+  padding: 10px 16px; /* Increased padding for better touch targets */
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Added transform for button effect */
+}
+
+.dato button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out; /* Added transform for toast */
+  z-index: 9999;
+  transform: translateY(20px); /* Start slightly below */
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateY(0); /* Move to original position when visible */
+}
+
+@media (max-width: 550px) {
+  .container {
+    margin: 30px 20px;
+    padding: 20px;
+  }
+
+  .dato {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dato button {
+    margin-top: 10px;
+    width: 100%;
+  }
+}

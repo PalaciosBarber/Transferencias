@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos de Transferencia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>Datos para Transferencia</h2>
+
+    <div class="dato">
+      <span>Nombre: Juan Pérez</span>
+      <button onclick="copiarTexto('Juan Pérez')">Copiar</button>
+    </div>
+
+    <div class="dato">
+      <span>CLABE: 012345678901234567</span>
+      <button onclick="copiarTexto('012345678901234567')">Copiar</button>
+    </div>
+
+    <div class="dato">
+      <span>Banco: BBVA</span>
+      <button onclick="copiarTexto('BBVA')">Copiar</button>
+    </div>
+
+  </div>
+
+  <div id="toast" class="toast">Texto copiado al portapapeles</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
